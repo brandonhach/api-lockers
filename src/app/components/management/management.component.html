@@ -7,7 +7,7 @@
     <div class="divider"></div>
     <div class="flex flex-col w-full h-1/12 gap-1 items-center justify-center">
       <button class="btn btn-wide">
-        <lucide-icon name="plus" [img]="PlusIcon"></lucide-icon> Add
+        <lucide-icon name="plus" [img]="PlusIcon"></lucide-icon> New Workspace
       </button>
       <button class="btn btn-wide">
         <lucide-icon name="plus" [img]="SearchIcon"></lucide-icon> Search
@@ -46,6 +46,11 @@
                 Google Cloud Platform</a
               >
             </li>
+            <li>
+              <a
+                ><lucide-icon name="plus" [img]="PlusIcon"></lucide-icon> Add</a
+              >
+            </li>
           </ul>
         </div>
       </div>
@@ -71,28 +76,15 @@
         <button class="btn btn-dash">
           <lucide-icon name="pencil" [img]="PencilIcon"></lucide-icon>
         </button>
-        <button></button>
       </div>
     </div>
     <div class="divider px-8"></div>
     <!-- Projects -->
-    <div class="w-full h-3/4 grid grid-cols-3 grid-rows-3 gap-4 pt-2 px-4">
-      <!-- Card 1 -->
-      <div
-        *ngFor="let item of items"
-        class="card card-border bg-base-100 size-full"
-      >
-        <div class="card-body">
-          <h2 class="card-title">Card Title</h2>
-          <p>
-            A card component has a figure, a body part, and inside body there
-            are title and actions parts
-          </p>
-          <div class="card-actions justify-end">
-            <button class="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
+    <div
+      class="w-full h-3/4 grid grid-cols-3 auto-rows-[225px] gap-4 pt-2 px-4 overflow-y-scroll"
+    >
+      <!-- Service Card # -->
+      <app-service-card *ngFor="let item of items"></app-service-card>
     </div>
   </div>
 </div>
