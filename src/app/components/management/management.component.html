@@ -1,0 +1,98 @@
+<div class="size-full rounded-xl flex flex-row font-mulish">
+  <!-- Workspace -->
+  <div class="w-1/6 h-full bg-base-200 rounded-r-2xl py-4 px-2">
+    <h1 class="font-extrabold text-2xl text-center px-2 text-primary pt-1">
+      Workspace
+    </h1>
+    <div class="divider"></div>
+    <div class="flex flex-col w-full h-1/12 gap-1 items-center justify-center">
+      <button class="btn btn-wide">
+        <lucide-icon name="plus" [img]="PlusIcon"></lucide-icon> Add
+      </button>
+      <button class="btn btn-wide">
+        <lucide-icon name="plus" [img]="SearchIcon"></lucide-icon> Search
+      </button>
+    </div>
+    <div class="divider"></div>
+    <!-- Project Section -->
+    <div class="w-full h-2/3">
+      <!-- Project 1 -->
+      <div class="collapse bg-base-200 collapse-arrow">
+        <input type="checkbox" />
+        <div class="collapse-title">
+          <h1 class="font-extrabold text-primary">
+            Net-Sukiyaki Microservices
+          </h1>
+        </div>
+        <div
+          class="collapse-content text-sm flex flex-col items-end justify-end overflow-y-hidden"
+        >
+          <ul class="menu bg-base-200 rounded-box w-56">
+            <li>
+              <a
+                ><lucide-icon name="file" [img]="FileIcon"></lucide-icon>
+                🎄DynamoDB</a
+              >
+            </li>
+            <li>
+              <a
+                ><lucide-icon name="file" [img]="FileIcon"></lucide-icon>
+                📀Auth0</a
+              >
+            </li>
+            <li>
+              <a
+                ><lucide-icon name="file" [img]="FileIcon"></lucide-icon>🚀
+                Google Cloud Platform</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Management Dashboard -->
+  <div class="w-5/6 h-full flex flex-col rounded-xl">
+    <!-- Info Area -->
+    <div
+      class="w-full h-1/4 flex flex-col items-start justify-start gap-4 pt-2 px-4"
+    >
+      <h1 class="font-bold text-4xl">🎄DynamoDB</h1>
+      <p class="w-1/2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, sequi ipsa
+        assumenda dignissimos sed saepe minus placeat similique nostrum labore,
+        praesentium perferendis ipsum hic sapiente beatae facilis temporibus
+        fugiat magnam.
+      </p>
+      <div class="w-full flex flex-row items-center justify-start gap-2">
+        <button class="btn btn-primary">
+          <lucide-icon name="plus" [img]="PlusIcon"></lucide-icon>Add Service
+        </button>
+        <button class="btn btn-dash">
+          <lucide-icon name="pencil" [img]="PencilIcon"></lucide-icon>
+        </button>
+        <button></button>
+      </div>
+    </div>
+    <div class="divider px-8"></div>
+    <!-- Projects -->
+    <div class="w-full h-3/4 grid grid-cols-3 grid-rows-3 gap-4 pt-2 px-4">
+      <!-- Card 1 -->
+      <div
+        *ngFor="let item of items"
+        class="card card-border bg-base-100 size-full"
+      >
+        <div class="card-body">
+          <h2 class="card-title">Card Title</h2>
+          <p>
+            A card component has a figure, a body part, and inside body there
+            are title and actions parts
+          </p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
